@@ -1,0 +1,4 @@
+{
+    "ros.distro": "humble",
+    "python.analysis.stubPath": "/home/frank/data/github/scip_example/src/stubs"
+}
