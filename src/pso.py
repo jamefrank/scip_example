@@ -13,6 +13,8 @@ import numpy as np
 from pyswarm import pso
 import objective_module
 
+obj_func = objective_module.ObjectiveFunction()
+
 call_count = 0
 
 # 定义目标函数
@@ -37,11 +39,11 @@ ub = [10, 10]  # 上界
 
 # 执行 PSO 优化
 # optimal_x, optimal_value = pso(objective_function, lb, ub)
-optimal_x, optimal_value = pso(objective_module.objective_function, lb, ub)
+optimal_x, optimal_value = pso(obj_func.compute, lb, ub)
 
 # 四舍五入得到最终的整数解
 optimal_x_rounded = np.round(optimal_x)
 
 print('Optimal x (rounded):', optimal_x_rounded)
 print('Optimal value (with rounded x):', objective_function(optimal_x_rounded))
-print('Number of function calls:', objective_module.get_call_count())
+print('Number of function calls:', obj_func.get_call_count())
