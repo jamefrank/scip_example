@@ -2,7 +2,7 @@
 Author: jamefrank 42687222+jamefrank@users.noreply.github.com
 Date: 2024-10-17 10:04:33
 LastEditors: jamefrank 42687222+jamefrank@users.noreply.github.com
-LastEditTime: 2024-10-17 14:10:34
+LastEditTime: 2024-10-17 15:56:06
 FilePath: /scip_example/src/pso.py
 Description: 粒子群优化
 
@@ -13,7 +13,9 @@ import numpy as np
 from pyswarm import pso
 import objective_module
 
-obj_func = objective_module.ObjectiveFunction()
+yaml_path = "abc/edf.yaml"
+
+obj_func = objective_module.ObjectiveFunction(yaml_path)
 
 call_count = 0
 

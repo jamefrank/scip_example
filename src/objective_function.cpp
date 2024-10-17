@@ -1,11 +1,17 @@
+#include <fstream>
+#include <iostream>
 #include <pybind11/numpy.h>
 #include <pybind11/pybind11.h>
+#include <string>
+#include <yaml-cpp/yaml.h>
 
 namespace py = pybind11;
 
 class ObjectiveFunction {
 public:
-  ObjectiveFunction() : call_count(0) {}
+  ObjectiveFunction(const std::string &yaml_path) : call_count(0) {
+    std::cout << "Reading YAML file: " << yaml_path << std::endl;
+  }
 
   double compute(py::array_t<double> x_array) {
     ++call_count;
@@ -27,7 +33,8 @@ private:
 
 PYBIND11_MODULE(objective_module, m) {
   py::class_<ObjectiveFunction>(m, "ObjectiveFunction")
-      .def(py::init<>()) // 默认构造函数
+      .def(py::init<const std::string &>(), py::arg("yaml_path"),
+           "Initialize with the path to the YAML file")
       .def("compute", &ObjectiveFunction::compute,
            "Compute the objective value.")
       .def("get_call_count", &ObjectiveFunction::get_call_count,

@@ -5,8 +5,10 @@ class ObjectiveFunction:
     @staticmethod
     def _pybind11_conduit_v1_(*args, **kwargs):
         ...
-    def __init__(self) -> None:
-        ...
+    def __init__(self, yaml_path: str) -> None:
+        """
+        Initialize with the path to the YAML file
+        """
     def compute(self, arg0: numpy.ndarray[numpy.float64]) -> float:
         """
         Compute the objective value.
