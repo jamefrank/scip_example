@@ -117,41 +117,32 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named my_pso
+# Target rules for targets named y
 
 # Build rule for target.
-my_pso: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 my_pso
-.PHONY : my_pso
+y : cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 y
+.PHONY : y
 
 # fast build rule for target.
-my_pso/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_pso.dir/build.make CMakeFiles/my_pso.dir/build
-.PHONY : my_pso/fast
-
-main.o: main.cpp.o
-.PHONY : main.o
+y/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/y.dir/build.make CMakeFiles/y.dir/build
+.PHONY : y/fast
 
 # target to build an object file
-main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_pso.dir/build.make CMakeFiles/my_pso.dir/main.cpp.o
-.PHONY : main.cpp.o
-
-main.i: main.cpp.i
-.PHONY : main.i
+main.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/y.dir/build.make CMakeFiles/y.dir/main.o
+.PHONY : main.o
 
 # target to preprocess a source file
-main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_pso.dir/build.make CMakeFiles/my_pso.dir/main.cpp.i
-.PHONY : main.cpp.i
-
-main.s: main.cpp.s
-.PHONY : main.s
+main.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/y.dir/build.make CMakeFiles/y.dir/main.i
+.PHONY : main.i
 
 # target to generate assembly for a file
-main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/my_pso.dir/build.make CMakeFiles/my_pso.dir/main.cpp.s
-.PHONY : main.cpp.s
+main.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/y.dir/build.make CMakeFiles/y.dir/main.s
+.PHONY : main.s
 
 # Help Target
 help:
@@ -161,7 +152,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... my_pso"
+	@echo "... y"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"

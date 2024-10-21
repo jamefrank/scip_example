@@ -1,3 +1,3 @@
-/home/frank/data/github/scip_example/build/CMakeFiles/my_pso.dir
+/home/frank/data/github/scip_example/build/CMakeFiles/y.dir
 /home/frank/data/github/scip_example/build/CMakeFiles/edit_cache.dir
 /home/frank/data/github/scip_example/build/CMakeFiles/rebuild_cache.dir

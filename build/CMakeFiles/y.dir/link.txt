@@ -1,0 +1,1 @@
+/usr/bin/c++ -rdynamic CMakeFiles/y.dir/main.o -o y  /usr/lib/x86_64-linux-gnu/libyaml-cpp.so.0.7.0 
